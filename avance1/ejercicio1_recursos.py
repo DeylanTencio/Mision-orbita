@@ -6,39 +6,39 @@
 # Descripción: Calcula los recursos necesarios para una misión.
 # ============================================================
 
-consumo_combustible_dia = 8
-reserva_combustible = 2
-consumo_oxigeno_tripulante_dia = 2
-emergencia_oxigeno = 5
-consumo_energia_dia = 5
-energia_exploracion = 10
-consumo_provisiones_tripulante_dia = 3
-provisiones_adicionales = 3
+CONSUMO_COMBUSTIBLE_DIA = 8
+RESERVA_COMBUSTIBLE = 10
+CONSUMO_OXIGENO_TRIPULANTE_DIA = 2
+EMERGENCIA_OXIGENO = 5
+CONSUMO_ENERGIA_DIA = 5
+ENERGIA_EXPLORACION = 10
+CONSUMO_PROVISIONES_TRIPULANTE_DIA = 1
+PROVISIONES_ADICIONALES = 3
 
-# --------- Entra da de datos ---------
+# --------- Entrada de datos ---------
 nombre_mision = input("Ingrese el nombre de la misión: ")
 tripulantes = int(input("Ingrese la cantidad de tripulantes: "))
 dias_mision = int(input("Ingrese la cantidad de días para llegar al destino: "))
 
 # --------- procesamiento de datos ---------
 # la ida y el regreso tardan lo mismo por lo cual el consumo de combustible es el mismo.
-combustible_ida = dias_mision * consumo_combustible_dia
-combustible_regreso = dias_mision * consumo_combustible_dia
-combustible_total = combustible_ida + combustible_regreso + reserva_combustible
+combustible_ida = dias_mision * CONSUMO_COMBUSTIBLE_DIA
+combustible_regreso = dias_mision * CONSUMO_COMBUSTIBLE_DIA
+combustible_total = combustible_ida + combustible_regreso + RESERVA_COMBUSTIBLE
 
 # Oxigeno, energia y provisiones se calculan solo para el viaje de ida.
-oxigeno_requerido = dias_mision * tripulantes * consumo_oxigeno_tripulante_dia + emergencia_oxigeno
-energia_requerida = dias_mision * consumo_energia_dia + energia_exploracion
-provisiones_requeridas = dias_mision * tripulantes * consumo_provisiones_tripulante_dia + provisiones_adicionales 
+oxigeno_requerido = dias_mision * tripulantes * CONSUMO_OXIGENO_TRIPULANTE_DIA + EMERGENCIA_OXIGENO
+energia_requerida = dias_mision * CONSUMO_ENERGIA_DIA + ENERGIA_EXPLORACION
+provisiones_requeridas = dias_mision * tripulantes * CONSUMO_PROVISIONES_TRIPULANTE_DIA + PROVISIONES_ADICIONALES 
 
 # --------- salida de datos ---------
 print("Mision:", nombre_mision)
 print("cantidad de tripulantes:", tripulantes)
 print("Duracion estimada hasta el destino:", dias_mision, "dias")
-print("combustible requerido para llegar:", combustible_ida, "litros")
-print("combustible requerido para el regreso:", combustible_regreso, "litros")
-print("combustible de reserva:", reserva_combustible, "litros")
-print("combustible total requerido:", combustible_total, "litros")
+print("combustible requerido para llegar:", combustible_ida, "unidades")
+print("combustible requerido para el regreso:", combustible_regreso, "unidades")
+print("combustible de reserva:", RESERVA_COMBUSTIBLE, "unidades")
+print("combustible total requerido:", combustible_total, "unidades")
 print("oxigeno requerido:", oxigeno_requerido, "unidades")
 print("Energia requerida:", energia_requerida, "unidades")
 print("Provisiones requeridas:", provisiones_requeridas, "unidades")
