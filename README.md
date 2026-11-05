@@ -4,5 +4,4 @@ Simulador de exploración espacial en Python — SOFT-01 Principios de Programac
 ## Integrante
 - Deylan Tencio
 
-## Cómo ejecutar
-python avance1/ejercicio1_recursos.py
+
