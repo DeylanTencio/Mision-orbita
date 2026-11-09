@@ -8,7 +8,7 @@
 # ============================================================
 
 # ----------- constantes -----------
-from unittest import case
+
 
 
 CONSUMO_COMBUSTIBLE_DIA = 8
@@ -70,21 +70,22 @@ if opcion_valida:
     print("Mision:", nombre_mision)
     print("Destino:", destino) 
     print ("Cantidad de tripulantes:", tripulantes)
-    print("Duracion dle viae de ida:", dias_mision, "dias")
+    print("Duracion del viaje de ida:", dias_mision, "dias")
     print("combustible requerido para llegar:", combustible_ida, "unidades")
     print( "combustible requerido para el regreso:", combustible_regreso, "unidades")
     print("Combustible de reserva:", RESERVA_COMBUSTIBLE, "unidades")
+    print("combustible total requerido:", combustible_total, "unidades")
     print( "Oxigeno requerido:", oxigeno_requerido, "unidades")
     print("Energia requerida:", energia_requerida, "unidades")
-    print( "Porivisiones requeridas:", provisiones_requeridas, "unidades")
+    print( "Provisiones requeridas:", provisiones_requeridas, "unidades")
 
     # Autorizacion del ejercicio 4 (decision anidada)
     if (combustible_disponible >= combustible_total
         and oxigeno_disponible >= oxigeno_requerido
         and energia_disponible >= energia_requerida
         and provisiones_disponibles >= provisiones_requeridas):
-        print("lanzamiento autorizado.")
+        print("Lanzamiento autorizado.")
     else:
         print("Lanzamiento no autorizado. La mision debe ser revisada.")
 else:
-    print("Opcion de destino no valida. La mision no puede planficarse.")
+    print("Opcion de destino no valida. La mision no puede planificarse.")
