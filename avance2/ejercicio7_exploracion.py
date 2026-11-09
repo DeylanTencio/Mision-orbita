@@ -33,7 +33,7 @@ explorando = True #bandera que controla menu
 # ---------- ciclo: el menu se repite mientras se explora -----------
 while explorando :
     print()
-    print("1. Analzar terreno")
+    print("1. Analizar terreno")
     print("2. Recolectar muestra")
     print ("3. Realizar observacion")
     print("4. Finalizar exploracion")
@@ -47,7 +47,7 @@ while explorando :
                 provisiones = provisiones - PROVISIONES_ANALIZAR 
                 actividades_realizadas = actividades_realizadas + 1
                 puntos_cientificos = puntos_cientificos + PUNTOS_ANALIZAR
-                print("Actividad realizada: Analizar terreno. Puntos obtenidos", PUNTOS_ANALIZAR)
+                print("Actividad realizada: Analizar terreno. Puntos obtenidos:", PUNTOS_ANALIZAR)
             else:
                 print("Recursos insuficientes para realizar la actividad. La exploracion finaliza.")
                 explorando = False
@@ -59,7 +59,7 @@ while explorando :
                 actividades_realizadas = actividades_realizadas + 1
                 muestras_recolectadas = muestras_recolectadas + 1
                 puntos_cientificos = puntos_cientificos + PUNTOS_RECOLECTAR
-                print("Actividad realizada: Recolectar muestra. Puntos obtenidos", PUNTOS_RECOLECTAR)
+                print("Actividad realizada: Recolectar muestra. Puntos obtenidos:", PUNTOS_RECOLECTAR)
             else:
                 print("Recursos insuficientes para realizar la actividad. La exploracion finaliza.")
                 explorando = False
@@ -70,7 +70,7 @@ while explorando :
                 provisiones = provisiones - PROVISIONES_OBSERVAR
                 actividades_realizadas = actividades_realizadas + 1
                 puntos_cientificos = puntos_cientificos + PUNTOS_OBSERVAR
-                print("Actividad realizada: Realizar observacion. Puntos obtenidos", PUNTOS_OBSERVAR)
+                print("Actividad realizada: Realizar observacion. Puntos obtenidos:", PUNTOS_OBSERVAR)
             else:
                 print("Recursos insuficientes para realizar la actividad. La exploracion finaliza.")
                 explorando = False
@@ -88,8 +88,5 @@ print(f"Muestras recolectadas: {muestras_recolectadas}.")
 print(f"Puntos cientificos: {puntos_cientificos}.")
 print(f"Energia restante: {energia} unidades.")
 print(f"Provisiones restantes: {provisiones} unidades.")                 
-print(f"Muestras recolectadas: {muestras_recolectadas}.")
-print(f"Puntos cientificos: {puntos_cientificos}.")
-print(f"Energia restante: {energia} unidades.")
-print(f"Provisiones restantes: {provisiones} unidades.")
+
 
