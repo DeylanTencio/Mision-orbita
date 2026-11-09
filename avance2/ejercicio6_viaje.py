@@ -37,36 +37,36 @@ while dias_transcurridos < dias_viaje and puede_continuar:
         and energia >= CONSUMO_ENERGIA_DIA
         and provisiones >= consumo_provisiones_dia):
         combustible = combustible - CONSUMO_COMBUSTIBLE_DIA
-        oxigeno = oxigeno - CONSUMO_OXIGENO_TRIPULANTE_DIA
+        oxigeno = oxigeno - consumo_oxigeno_dia
         energia = energia - CONSUMO_ENERGIA_DIA
-        provisiones = provisiones - CONSUMO_PROVISIONES_TRIPULANTE_DIA
+        provisiones = provisiones - consumo_provisiones_dia
         dias_transcurridos = dias_transcurridos + 1 
         print (f"Dia {dias_transcurridos}: combustible: {combustible}, oxigeno: {oxigeno}, energia: {energia}, provisiones {provisiones}")
 
     else: 
         puede_continuar = False
 
-    # ----------- Salida resultados -----------
-    if puede_continuar:
-        print(f"La nave llego al destino en {dias_transcurridos} dias")
-        print(f"Combustible restante: {combustible}, unidades")
-        print(f"Oxigeno restante: {oxigeno}, unidades")
-        print(f"Energia restante: {energia}, unidades")
-        print(f"provisiones restantes: {provisiones}, unidades")
+# ----------- Salida resultados -----------
+if puede_continuar:
+    print(f"La nave llego al destino en {dias_transcurridos} dias")
+    print(f"Combustible restante: {combustible} unidades")
+    print(f"Oxigeno restante: {oxigeno} unidades")
+    print(f"Energia restante: {energia} unidades")
+    print(f"provisiones restantes: {provisiones} unidades")
 
-    else:
-        dia_fallido = dias_transcurridos + 1
-        print(f"viaje interrumpiddo en ek dia, {dias_fallido}")
-        # Se revisa cada recurso por separado: puede faltar mas de uno a la vez
-        if combustible < CONSUMO_COMBUSTIBLE_DIA:
-            print("Recurso insuficiente: combustible")
-        if oxigeno < CONSUMO_OXIGENO_TRIPULANTE_DIA:
-            print("Recurso insuficiente: oxigeno")
-        if energia < CONSUMO_ENERGIA_DIA:
-            print("Recurso insuficiente: energia")
-        if provisiones < CONSUMO_PROVISIONES_TRIPULANTE_DIA:
-            print("Recurso insuficiente: provisiones")
-        print(f"dias completados: {dias_transcurridos}")
+else:
+    dia_fallido = dias_transcurridos + 1
+    print(f"viaje interrumpiddo en el dia, {dia_fallido}")
+    # Se revisa cada recurso por separado: puede faltar mas de uno a la vez
+    if combustible < CONSUMO_COMBUSTIBLE_DIA:
+        print("Recurso insuficiente: combustible")
+    if oxigeno < consumo_oxigeno_dia:
+        print("Recurso insuficiente: oxigeno")
+    if energia < CONSUMO_ENERGIA_DIA:
+        print("Recurso insuficiente: energia")
+    if provisiones < consumo_provisiones_dia:
+        print("Recurso insuficiente: provisiones")
+    print(f"dias completados: {dias_transcurridos}")
 
 
 
