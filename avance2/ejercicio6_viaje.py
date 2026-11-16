@@ -56,7 +56,7 @@ if puede_continuar:
 
 else:
     dia_fallido = dias_transcurridos + 1
-    print(f"viaje interrumpiddo en el dia, {dia_fallido}")
+    print(f"Viaje interrumpido en el dia, {dia_fallido}")
     # Se revisa cada recurso por separado: puede faltar mas de uno a la vez
     if combustible < CONSUMO_COMBUSTIBLE_DIA:
         print("Recurso insuficiente: combustible")
